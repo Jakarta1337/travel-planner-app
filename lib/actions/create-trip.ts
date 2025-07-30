@@ -1,8 +1,9 @@
 "use server";
 
+import { redirect } from "next/navigation";
+
 import { auth } from "@/auth";
 import { prisma } from "../prisma";
-import { redirect } from "next/navigation";
 
 export async function createTrip(formData: FormData) {
   const session = await auth();
